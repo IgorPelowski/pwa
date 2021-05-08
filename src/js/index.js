@@ -16,6 +16,7 @@ const clock = document.querySelector('.clock');
 
 function added (){
     count++;
+    counting++;
     addNumber();
 }
 function deleted (){
@@ -24,6 +25,7 @@ function deleted (){
     }
     
     count--;
+    counting--;
     addNumber();
 }
 addButton.addEventListener('click', added);
@@ -50,6 +52,17 @@ function colorChange2(){
 function colorDelete2(){
     clock.classList.remove('clock__animation2');
 }
+
+localStorage.setItem('count', 0);
+let counting = 0;
+addButton.addEventListener('click',()=>{
+    localStorage.setItem('count',counting);
+});
+deleteButton.addEventListener('click',()=>{
+    localStorage.setItem('count',counting);
+});
+
+
 
 
 
