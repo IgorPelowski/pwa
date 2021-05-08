@@ -28,9 +28,27 @@ function deleted (){
 }
 addButton.addEventListener('click', added);
 deleteButton.addEventListener('click', deleted);
+addButton.addEventListener('click', colorChange);
+deleteButton.addEventListener('click', colorChange2);
 
 function addNumber(){
     clock.innerHTML=count;
+}
+function colorChange(){
+    clock.classList.add('clock__animation');
+        setTimeout(colorDelete, 2000);
+
+}
+function colorDelete(){
+    clock.classList.remove('clock__animation');
+}
+function colorChange2(){
+    clock.classList.add('clock__animation2');
+        setTimeout(colorDelete2, 2000);
+
+}
+function colorDelete2(){
+    clock.classList.remove('clock__animation2');
 }
 
 

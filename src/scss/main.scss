@@ -2,6 +2,51 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@keyframes border{
+  from{
+    border: 3px solid rgb(9, 255, 0);
+  }
+  to{
+    border: 3px solid rgb(223, 23, 23);
+  }
+}
+// // @keyframes star{
+// //   from{
+// //     transform: scale(1);
+// //     transform: rotate(0deg);
+// //     color: black;
+    
+// //   }
+//   to{
+   
+//     color: cadetblue;
+//     font-size: 50px;
+//     transform: rotate(360deg);
+
+//   }
+// }
+@keyframes count {
+  0%{
+    color: black;
+  }
+  
+  100%{
+    color: rgb(21, 252, 0);
+  }
+  
+}
+@keyframes count2 {
+  0%{
+    color: black;
+  }
+  
+  100%{
+    color: rgb(255, 12, 4);
+  }
+  
+}
+
+
 
 body {
   background: $wtf;
@@ -39,7 +84,30 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
+  border: 3px solid rgb(9, 255, 0);
+  animation: border 2s alternate infinite ;
+  &__animation{
+    animation: count 2s normal forwards;;
+  }
+  &__animation2{
+    animation: count2 2s normal forwards;;
+  }
 }
+// .stars{
+//   display: flex;
+//   grid-column: 2/3;
+//   grid-row: 2/3;
+//   color: black;
+//   font-size: 20px;
+//   animation: star 3s alternate infinite;
+//   position:fixed;
+//     &__open{
+//       position: sticky;
+//       display: inline-block;
+//     }
+// }
+
+
 .text{
   grid-column:2/12 ;
   grid-row:1/2 ;
