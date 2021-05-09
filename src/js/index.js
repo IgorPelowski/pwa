@@ -15,8 +15,10 @@ const deleteButton = document.querySelector('.deleteButton');
 const clock = document.querySelector('.clock');
 
 function added (){
+    
     count++;
     counting++;
+    
     addNumber();
 }
 function deleted (){
@@ -44,6 +46,8 @@ function colorChange(){
 function colorDelete(){
     clock.classList.remove('clock__animation');
 }
+
+
 function colorChange2(){
     clock.classList.add('clock__animation2');
         setTimeout(colorDelete2, 2000);
@@ -53,7 +57,7 @@ function colorDelete2(){
     clock.classList.remove('clock__animation2');
 }
 
-localStorage.setItem('count', 0);
+localStorage.setItem('count', counting);
 let counting = 0;
 addButton.addEventListener('click',()=>{
     localStorage.setItem('count',counting);
@@ -61,6 +65,17 @@ addButton.addEventListener('click',()=>{
 deleteButton.addEventListener('click',()=>{
     localStorage.setItem('count',counting);
 });
+
+
+
+
+function countSave(){
+    let x = localStorage.getItem('count');
+    localStorage.setItem('saved', x);
+}
+const save = document.querySelector('.save');
+save.addEventListener('click', countSave);
+
 
 
 
