@@ -92,6 +92,9 @@ body {
   &__animation2{
     animation: count2 2s normal forwards;;
   }
+  &__js{
+    color: black;
+  }
 }
 // .stars{
 //   display: flex;
@@ -114,5 +117,9 @@ body {
 }
 .save{
   grid-row: 8/8;
+  grid-column: 6/8;
+}
+.history{
+  grid-row: 10/10;
   grid-column: 6/8;
 }

@@ -66,15 +66,24 @@ deleteButton.addEventListener('click',()=>{
     localStorage.setItem('count',counting);
 });
 
-
-
-
 function countSave(){
+    let savee = localStorage.getItem('saved');
+    if(savee){
+        let y = Number(localStorage.getItem('saved'));
+        let x = Number(localStorage.getItem('count'));
+        let z = y + x;
+        localStorage.setItem('saved', z);
+    }else{
     let x = localStorage.getItem('count');
     localStorage.setItem('saved', x);
-}
+}}
 const save = document.querySelector('.save');
 save.addEventListener('click', countSave);
+
+
+
+
+
 
 
 
@@ -85,4 +94,4 @@ save.addEventListener('click', countSave);
 //     console.log(count)
 //     setTimeout(c, 5000);
 // }
-// c();
+// c()
