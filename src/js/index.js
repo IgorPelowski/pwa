@@ -6,13 +6,22 @@ registerSW();
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+console.log('HEasdLLO 🚀')
+console.log('HasdELLO 🚀')
+
+const deleteData = document.querySelector('.deleteData');
+deleteData.addEventListener('click', ()=>{
+    localStorage.setItem('saved', 0);
+})
+
 
 let count = 0;
 
 const addButton = document.querySelector('.addButton');
 const deleteButton = document.querySelector('.deleteButton');
 const clock = document.querySelector('.clock');
+
+addButton.addEventListener('click',added);
 
 function added (){
     
@@ -30,7 +39,7 @@ function deleted (){
     counting--;
     addNumber();
 }
-addButton.addEventListener('click', added);
+
 deleteButton.addEventListener('click', deleted);
 addButton.addEventListener('click', colorChange);
 deleteButton.addEventListener('click', colorChange2);
@@ -76,12 +85,19 @@ function countSave(){
     }else{
     let x = localStorage.getItem('count');
     localStorage.setItem('saved', x);
-}}
+}};
 const save = document.querySelector('.save');
 save.addEventListener('click', countSave);
 
 
 
+const clockJs = document.querySelector('.clock__js');
+const loadData = document.querySelector('.loadData');
+
+loadData.addEventListener('click', ()=>{
+    let lol = localStorage.getItem('saved');
+    clockJs.innerHTML = lol;
+});
 
 
 
