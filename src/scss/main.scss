@@ -121,9 +121,13 @@ body {
 }
 .history{
   grid-row: 10/10;
-  grid-column: 6/8;
+  grid-column: 8/12;
 }
 .loadData{
   grid-row: 8/8;
   grid-column: 5/9;
+}
+.deleteData{
+  grid-row: 10/11;
+  grid-column: 2/6; 
 }
