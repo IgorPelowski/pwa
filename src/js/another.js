@@ -1,3 +1,4 @@
+import '../scss/main.scss';
 console.log('hello another');
 
 const clockJs = document.querySelector('.clock__js');
