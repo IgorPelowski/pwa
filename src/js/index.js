@@ -9,10 +9,7 @@ registerSW();
 console.log('HEasdLLO 🚀')
 console.log('HasdELLO 🚀')
 
-const deleteData = document.querySelector('.deleteData');
-deleteData.addEventListener('click', ()=>{
-    localStorage.setItem('saved', 0);
-})
+
 
 
 let count = 0;
@@ -90,14 +87,6 @@ const save = document.querySelector('.save');
 save.addEventListener('click', countSave);
 
 
-
-const clockJs = document.querySelector('.clock__js');
-const loadData = document.querySelector('.loadData');
-
-loadData.addEventListener('click', ()=>{
-    let lol = localStorage.getItem('saved');
-    clockJs.innerHTML = lol;
-});
 
 
 
